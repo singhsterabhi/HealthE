@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAA;EACD,KAAK,EAAC,KAAK;EACX,eAAe,EAAE,QAAQ;EACzB,UAAU,EAAE,MAAM;CAKrB;;AARD,AAKI,KALC,CAKD,EAAE,EALN,KAAK,CAKE,EAAE,CAAA;EACD,MAAM,EAAE,eAAe;CAC1B",
+    "sources": [
+        "DisplayWeightData.scss"
+    ],
+    "names": [],
+    "file": "DisplayWeightData.css"
+}
