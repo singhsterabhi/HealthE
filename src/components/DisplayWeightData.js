@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import fire from "./firebase";
 import "firebase/database";
-import "./css/DisplayWeightData.css";
+import "../css/DisplayWeightData.css";
 import WeightChart from "./WeightChart";
 
 const database = fire.database();
