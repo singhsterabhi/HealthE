@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import fire from "./firebase";
 import "firebase/database";
+import "../css/AddWeights.css";
 const database = fire.database();
 
 class AddWeights extends Component {
@@ -10,14 +11,12 @@ class AddWeights extends Component {
   };
 
   handleChange = e => {
-    // console.log(e.target.value);
     this.setState({ [e.target.name]: e.target.value });
   };
 
   AddWeight = e => {
     e.preventDefault();
     let { weight, date } = this.state;
-    // console.log(date);
     let d = new Date(date).getTime();
 
     console.log(d);
@@ -35,22 +34,38 @@ class AddWeights extends Component {
 
   render() {
     return (
-      <div>
-        <p>Add Weights</p>
-        <form onSubmit={this.AddWeight}>
-          <input
-            type='text'
-            name='weight'
-            value={this.state.weight}
-            onChange={this.handleChange}
-          />
-          <input
-            type='date'
-            name='date'
-            value={this.state.date}
-            onChange={this.handleChange}
-          />
-          <button type='submit'>ADD</button>
+      <div id="addWeight">
+        <form onSubmit={this.AddWeight} >
+          
+            <label for='inputWeight' className=''>
+              Weight
+            </label>
+
+            <input
+              className='form-control'
+              id='inputWeight'
+              placeholder='Input Weight'
+              type='text'
+              name='weight'
+              value={this.state.weight}
+              onChange={this.handleChange}
+            />
+            <label for='inputDate' className=''>
+              Date
+            </label>
+
+            <input
+              className='form-control'
+              id='inputDate'
+              placeholder='Input Date'
+              type='date'
+              name='date'
+              value={this.state.date}
+              onChange={this.handleChange}
+            />
+            <button id="addWeightButton" type='submit' className='btn btn-dark '>
+              ADD
+            </button>
         </form>
       </div>
     );
