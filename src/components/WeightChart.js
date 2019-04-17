@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Chart from "chart.js";
 import moment from "moment";
+import "../css/WeightCharts.css";
 
 class WeightChart extends Component {
   constructor(props) {
@@ -53,6 +54,8 @@ class WeightChart extends Component {
         ]
       },
       options: {
+        responsive: true,
+        maintainAspectRatio: false,
         title: {
           text: "Weight"
         },
@@ -74,12 +77,12 @@ class WeightChart extends Component {
                 labelString: "Date"
               },
               ticks: {
-                source:'data',
-                autoskip:true,
+                source: "auto",
+                autoskip: true,
                 callback: function(value, index, values) {
                   if (values[index])
                     return moment(parseInt(values[index]["value"], 10)).format(
-                      'MMM D, YY'
+                      "MMM DD, YY"
                     );
                   else return value;
                 }
@@ -92,7 +95,7 @@ class WeightChart extends Component {
                 display: true,
                 labelString: "Weights"
               }
-            }
+            },
           ]
         },
         tooltips: {
@@ -113,10 +116,11 @@ class WeightChart extends Component {
     };
 
     let ctx = document.getElementById("myChart").getContext("2d");
+    Chart.defaults.global.defaultFontColor = "black";
     window.myLineChart = new Chart(ctx, config);
   }
   render() {
-    return <canvas id='myChart' />;
+    return <canvas id='myChart' className='col ' />;
   }
 }
 

@@ -25,6 +25,11 @@
   text-align: center;
 }
 
+#addWeight form input {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
 #addWeight form #addWeightButton {
   width: 250px;
   margin-top: 20px;

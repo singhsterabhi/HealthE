@@ -12,7 +12,6 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <h1>Health-E</h1>
         <DisplayWeightData />
       </div>
     );

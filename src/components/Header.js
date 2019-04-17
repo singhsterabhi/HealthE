@@ -1,15 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import '../css/Header.css'
 
-const Header = ({children}) => {
+const Header = ({children,path}) => {
+    console.log(path)
   return (
-    <div>
-      <nav className='navbar navbar-expand-lg navbar-light bg-light'>
-        <Link className='navbar-brand' to='/'>
+    <div className="">
+      <nav className='navbar navbar-expand-lg navbar-dark bg-dark justify-content-between justify-content-md-center'>
+        <Link className='navbar-brand' to='/' style={{fontWeight:600}}>
           Health-E
         </Link>
         <button
-          className='navbar-toggler'
+          className='navbar-toggler justify-content-end'
           type='button'
           data-toggle='collapse'
           data-target='#navbarSupportedContent'
@@ -19,16 +21,16 @@ const Header = ({children}) => {
           <span className='navbar-toggler-icon' />
         </button>
 
-        <div className='collapse navbar-collapse' id='navbarSupportedContent'>
-          <ul className='navbar-nav mr-auto'>
-            <li className='nav-item active'>
+        <div className='collapse navbar-collapse justify-content-end' id='navbarSupportedContent' >
+          <ul className='nav navbar-nav ' >
+            <li className={'nav-item '+(path==="/"?"active":"")}>
               <Link className='nav-link' to='/'>
-                Home <span className='sr-only'>(current)</span>
+                Home 
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className={'nav-item '+(path==="/add"?"active":"")}>
               <Link className='nav-link' to='/add'>
-                Add Weights
+                Add Weights 
               </Link>
             </li>
           </ul>

@@ -27,11 +27,11 @@ class DisplayWeightData extends Component {
 
   render() {
     return (
-      <div>
-        <div className='accordion' id='accordionExample'>
-          <h2 className='mb-0'>
-            <button
-              className='btn btn-link'
+      <div id="displayWeightData" className="container">
+        <div className='accordion ' id='accordionExample'>
+          <h2 className='mb-0 row justify-content-center'>
+            <button id="showData"
+              className='btn btn-light btn-sm'
               type='button'
               data-toggle='collapse'
               data-target='#collapseOne'
@@ -43,15 +43,15 @@ class DisplayWeightData extends Component {
 
           <div
             id='collapseOne'
-            className='collapse '
+            className='collapse row justify-content-center'
             aria-labelledby='headingOne'
             data-parent='#accordionExample'>
-            <div className='card-body'>
+            <div className='card-body table-responsive col col-md-5 ' id="weightsTable">
               <WeightsTable data={this.state.weightData} />
             </div>
           </div>
         </div>
-        <div id='weightsChart'>
+        <div id='weightsChart' className="row justify-content-center">
           <WeightChart d={this.state.weightData} />
         </div>
       </div>
@@ -79,8 +79,8 @@ const WeightsTable = props => {
   ];
 
   return (
-    <table>
-      <thead>
+    <table className="table table-dark table-hover table-sm table-striped table-bordered">
+      <thead className="">
         <tr>
           <th>Date</th>
           <th>weight</th>

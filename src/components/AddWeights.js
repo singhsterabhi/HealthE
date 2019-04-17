@@ -37,7 +37,7 @@ class AddWeights extends Component {
       <div id="addWeight">
         <form onSubmit={this.AddWeight} >
           
-            <label for='inputWeight' className=''>
+            <label htmlFor='inputWeight' className=''>
               Weight
             </label>
 
@@ -50,7 +50,7 @@ class AddWeights extends Component {
               value={this.state.weight}
               onChange={this.handleChange}
             />
-            <label for='inputDate' className=''>
+            <label htmlFor='inputDate' className=''>
               Date
             </label>
 

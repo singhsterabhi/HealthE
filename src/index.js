@@ -8,9 +8,9 @@ import Header from './components/Header';
 
 ReactDOM.render(
   <Router>
-    <Switch>
-      <Route exact path="/" render={()=><Header><App/></Header>}/>
-      <Route path="/add" render={()=><Header><AddWeights/></Header>}/>
+    <Switch>path
+      <Route exact path="/" render={()=><Header path="/"><App/></Header>}/>
+      <Route path="/add" render={()=><Header path="/add"><AddWeights/></Header>}/>
     </Switch>
   </Router>,
 

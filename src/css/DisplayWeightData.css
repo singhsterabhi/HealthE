@@ -1,10 +1,23 @@
+#showData {
+  margin: 20px;
+}
+
+#weightsTable {
+  max-height: 500px;
+  overflow-y: scroll;
+  margin: 20px 20px 50px 20px;
+  padding: 0;
+}
+
 table {
-  width: 500px;
-  border-collapse: collapse;
+  table-layout: fixed;
   text-align: center;
 }
 
-table th, table td {
-  border: 2px solid black;
+#weightsChart {
+  padding: 40px 0 10px 0;
+  background: white;
+  margin: 0px 10px 40px 10px;
+  border-radius: 20px;
 }
 /*# sourceMappingURL=DisplayWeightData.css.map */
